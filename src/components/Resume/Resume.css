@@ -1,1 +1,9 @@
-.Resume{}
+.Resume{
+    width:100%;
+    background-color:#000;
+}
+
+.Resume img{
+    width: 85%;
+    margin: 2vh auto;
+}
