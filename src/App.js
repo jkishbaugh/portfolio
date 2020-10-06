@@ -1,13 +1,17 @@
 import React from 'react';
 import './App.css';
-import Resume from "./components/Resume/Resume";
+import Layout from "./hoc/Layout/Layout";
+import {BrowserRouter} from "react-router-dom";
 
 function App() {
-  return (
-    <div className="App">
-      <Resume/>
-    </div>
-  );
+    return (
+        <div className="App">
+            <BrowserRouter>
+                <Layout>
+                </Layout>
+            </BrowserRouter>
+        </div>
+    );
 }
 
 export default App;
