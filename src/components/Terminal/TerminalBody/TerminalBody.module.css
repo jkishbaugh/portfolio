@@ -1,0 +1,29 @@
+.TerminalBody{
+    left: 5px;
+    width: 100%;
+}
+.TerminalBody label{
+    color: #F8D084;
+    font-weight: bolder;
+    font-size: 14px;
+    width:10%;
+    text-align: start;
+    margin-right: 3px;
+}
+.TerminalBody input{
+    outline: none;
+    border: none;
+    background-color: inherit;
+    caret-shape: bar;
+    caret-color: #F8D084;
+    width:90%;
+}
+.TerminalBody input:focus{
+    animation: PulseAttention 1.5s cubic-bezier(.215, .61, .355, 1) forwards infinite;
+}
+
+@keyframes PulseAttention {
+    50% {
+        border-color: #F8D084;
+    }
+}

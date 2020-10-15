@@ -1,8 +1,10 @@
 .HeaderImage, .HeaderImage img{
     right: -1vh;
+    bottom:-1vh;
     width:100%;
     margin: 0;
     display:flex;
+    position:fixed;
 }
 
 

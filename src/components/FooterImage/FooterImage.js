@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './HeaderImage.module.css'
+import styles from './FooterImage.module.css'
 import header from '../../assets/header_image.png'
 
-const HeaderImage = () => {
+const FooterImage = () => {
   return (
 
     <div className={styles.HeaderImage}>
@@ -13,4 +13,4 @@ const HeaderImage = () => {
 
 }
 
-export default HeaderImage;
+export default FooterImage;

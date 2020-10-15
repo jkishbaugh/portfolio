@@ -1,5 +1,6 @@
 .NavigationItem{
-    margin:10px 0;
+    margin:10vh 2vh;
+    padding:0 5vh ;
     box-sizing: border-box;
     display: block;
     width: 100%;
@@ -11,6 +12,7 @@
     width:100%;
     box-sizing:border-box ;
     display: block;
+    font-size:24px;
 }
 
 .NavigationItem a:hover,
