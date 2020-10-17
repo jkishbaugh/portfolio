@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import Aux from '../Auxillary/Auxillary'
-import classes from "./Layout.css"
+import classes from "./Layout.module.css"
 import Toolbar from "../../components/Navigation/Toolbar/Toolbar";
 import SideDrawer from '../../components/Navigation/Sidedrawer/SideDrawer'
 
@@ -17,6 +17,7 @@ class Layout extends Component{
             return {showSideDrawer: !prevState.showSideDrawer}
         });
     };
+
 
     render() {
         return(
