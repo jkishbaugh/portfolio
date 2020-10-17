@@ -6,8 +6,9 @@ const TerminalBody = (props) => {
 
     <div className={styles.TerminalBody}>
       <form>
+          <p>{props.history.join("\n")}</p>
         <label>{props.prefix} {props.prompt}</label>
-        <input type={'text'} autoFocus />
+        <input className={"terminalInput"} type={'text'} value={props.value} onChange={props.changed} onKeyDown={props.keyDown} autoFocus />
       </form>
     </div>
 

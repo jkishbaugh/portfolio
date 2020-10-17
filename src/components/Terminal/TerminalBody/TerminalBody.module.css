@@ -3,7 +3,7 @@
     width: 100%;
 }
 .TerminalBody label{
-    color: #F8D084;
+    color: #E18D24;
     font-weight: bolder;
     font-size: 14px;
     width:10%;
@@ -15,7 +15,8 @@
     border: none;
     background-color: inherit;
     caret-shape: bar;
-    caret-color: #F8D084;
+    caret-color: #E18D24;
+    color: #E18D24;
     width:90%;
 }
 .TerminalBody input:focus{

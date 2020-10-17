@@ -1,11 +1,13 @@
 /*
+#D0E9E0
     text-color #E18D24
     prompt-color #F8D084
     alternative background: 4A2517
 */
 .Terminal{
-    border: 4px solid #595539;
-    background-color: #49A885;
+    border: 4px solid #E18D24;
+    border-radius:5px;
+    background-color: #000;
     height: 55vh;
     width: 100vh;
     display:flex;
