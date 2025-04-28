@@ -1,30 +1,140 @@
-## Getting Started
+Personal Portfolio
+This is a simple, modern developer portfolio website built with Next.js 14, Tailwind CSS, and Markdown-powered blog posts.
 
-First, run the development server:
+Features
+Fast, lightweight, and optimized (Next.js + Turbopack)
 
-```bash
+Mobile-first responsive design
+
+Blog functionality with Markdown content
+
+Easy to expand and maintain
+
+Built for quick iteration and future improvements
+
+Project Structure
+arduino
+Copy
+Edit
+/app
+  /blog
+    /[slug]        // Dynamic route for individual posts
+    page.tsx       // Blog index page
+/components
+  Header.tsx       // Site header with mobile menu
+  Hero.tsx         // Landing page hero section
+/lib
+  posts.ts         // Markdown reading utilities
+/posts
+  my-first-post.md // Example markdown blog post
+/public
+  favicon.ico      // Site favicon
+README.md
+tailwind.config.ts // Tailwind CSS configuration
+next.config.mjs    // Next.js configuration
+Tech Stack
+Next.js 14 (App Router)
+
+Tailwind CSS
+
+TypeScript
+
+Gray-Matter for Markdown frontmatter parsing
+
+Remark for Markdown-to-HTML conversion
+
+Getting Started
+1. Clone the repository
+bash
+Copy
+Edit
+git clone https://github.com/your-username/your-portfolio.git
+cd your-portfolio
+2. Install dependencies
+bash
+Copy
+Edit
+npm install
+or
+
+bash
+Copy
+Edit
+pnpm install
+or
+
+bash
+Copy
+Edit
+yarn install
+3. Start the development server
+bash
+Copy
+Edit
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open http://localhost:3000 in your browser to view the site.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Adding New Blog Posts
+Create a new Markdown (.md) file inside the /posts directory.
 
-## Learn More
+Use the following frontmatter template at the top of the file:
 
-To learn more about Next.js, take a look at the following resources:
+markdown
+Copy
+Edit
+---
+title: "My New Blog Post"
+date: "2025-04-28"
+summary: "A short description of the post."
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Write your Markdown content below the frontmatter.
+Posts will automatically appear on the /blog page.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Customization
+Update colors and fonts in tailwind.config.ts
 
-## Deploy on Vercel
+Modify the Hero section in /components/Hero.tsx
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Update site metadata and SEO settings where needed
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deployment
+You can deploy this portfolio easily to platforms like:
+
+Vercel (recommended for Next.js)
+
+Netlify
+
+Render
+
+Deploying to Vercel
+Install the Vercel CLI if you don't already have it:
+
+bash
+Copy
+Edit
+npm install -g vercel
+Then deploy:
+
+bash
+Copy
+Edit
+npx vercel
+Follow the CLI prompts to complete deployment.
+
+Future Improvements
+Support for MDX-based blog posts
+
+Tag and category system
+
+Dark/light theme toggle
+
+RSS feed generation
+
+Enhanced SEO metadata
+
+License
+This project is open source and available under the MIT License.
+
+Acknowledgements
+Built using Next.js and Tailwind CSS. Inspired by simple, clean personal websites for developers.
