@@ -1,116 +1,51 @@
 # Personal Portfolio
-This is a simple, modern developer portfolio website built with Next.js 14, Tailwind CSS, and Markdown-powered blog posts.
 
-## Features
-Fast, lightweight, and optimized (Next.js + Turbopack)
-Mobile-first responsive design
-Blog functionality with Markdown content
-Easy to expand and maintain
-Built for quick iteration and future improvements
+Hi, I’m Justin, a software engineer focused on building scalable, reliable web applications. This is my personal portfolio site, where I share my work, blog about things I’m learning, and track my growth as a developer.
 
-## Project Structure
+## Overview
 
-```
-/app
-  /blog
-    /[slug]        // Dynamic route for individual posts
-    page.tsx       // Blog index page
-/components
-  Header.tsx       // Site header with mobile menu
-  Hero.tsx         // Landing page hero section
-/lib
-  posts.ts         // Markdown reading utilities
-/posts
-  my-first-post.md // Example markdown blog post
-/public
-  favicon.ico      // Site favicon
-README.md
-tailwind.config.ts // Tailwind CSS configuration
-next.config.mjs    // Next.js configuration
-```
-## Tech Stack
+This project is a developer portfolio built with:
 
-- Next.js 14 (App Router)
-- Tailwind CSS
+- [Next.js 14](https://nextjs.org/) (App Router)
+- [Tailwind CSS](https://tailwindcss.com/)
 - TypeScript
-- Gray-Matter for Markdown frontmatter parsing
-- Remark for Markdown-to-HTML conversion
+- Markdown for blog posts
 
-## Getting Started
-1. Clone the repository
-  ```bash
-git clone https://github.com/your-username/your-portfolio.git
-cd your-portfolio
-  ```
-2. Install dependencies
+It’s optimized for fast iteration, content-driven updates, and clean responsive design.
+
+## Running Locally
+
 ```bash
+git clone https://github.com/jkishbugh/portfolio.git
+cd portfolio
 npm install
-```
-or
-
-```bash
-pnpm install
-```
-or
-
-```bash
-yarn install
-```
-3. Start the development server
-```bash
 npm run dev
 ```
-Open http://localhost:3000 in your browser to view the site.
 
-## Adding New Blog Posts
+Visit `http://localhost:3000` to view the site.
 
-1. Create a new Markdown (.md) file inside the /posts directory.
-1. Use the following frontmatter template at the top of the file:
+## Writing Blog Posts
+
+Add new Markdown files to the `/posts` folder. Use frontmatter like this:
 
 ```markdown
 ---
-title: "My New Blog Post"
+title: "Post Title"
 date: "2025-04-28"
-summary: "A short description of the post."
+summary: "A short post summary."
 ---
 ```
-1. Write your Markdown content below the frontmatter.
-1. Posts will automatically appear on the /blog page.
 
-## Customization
-- Update colors and fonts in tailwind.config.ts
-- Modify the Hero section in /components/Hero.tsx
-- Update site metadata and SEO settings where needed
+Posts will be listed automatically on the `/blog` page.
 
 ## Deployment
 
-You can deploy this portfolio easily to platforms like:
+This project is designed to deploy instantly to [Vercel](https://vercel.com), the official platform for Next.js:
 
-- Vercel (recommended for Next.js)
-- Netlify
-- Render
-### Deploying to Vercel
-
-1. Install the Vercel CLI if you don't already have it:
-```bash
-npm install -g vercel
-```
-1. Then deploy:
 ```bash
 npx vercel
 ```
-1. Follow the CLI prompts to complete deployment.
-
-## Future Improvements
-
-- Support for MDX-based blog posts
-- Tag and category system
-- Dark/light theme toggle
-- RSS feed generation
-- Enhanced SEO metadata
 
 ## License
-This project is open source and available under the MIT License.
 
-## Acknowledgements
-Built using Next.js and Tailwind CSS. Inspired by simple, clean personal websites for developers.
+MIT
