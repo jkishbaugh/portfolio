@@ -3,6 +3,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { FaJava } from "react-icons/fa";
+import { SiSpring, SiSpringboot } from "react-icons/si";
 
 export default function Card() {
   const [flipped, setFlipped] = useState(false);
@@ -89,20 +91,20 @@ export default function Card() {
               <div>
                 <h3 className="text-lg font-bold mb-1">Hidden Trait</h3>
                 <p>
-                  Intelligently lazy — I’ll automate it before I repeat it,
+                  Intelligently lazy: I&apos;ll automate it before I repeat it,
                   even if it takes three hours to save thirty seconds.
                 </p>
               </div>
             </div>
 
             <div className="mt-6 flex justify-center gap-4">
-              <a
+              {/* <a
                 href="/projects"
                 className="text-secondary dark:text-dark-secondary hover:underline text-sm"
                 aria-label="View my projects"
               >
                 Projects
-              </a>
+              </a> */}
             <a
                 href="/resume"
                 className="text-secondary dark:text-dark-secondary hover:underline text-sm"
@@ -150,7 +152,7 @@ export default function Card() {
                   Stage 3
                 </div>
                 <div className="bg-dark-secondary dark:bg-white/10 dark:text-dark-background p-2 rounded-full shadow-md">
-                  <i className="devicon-spring-plain colored text-xl" aria-label="Spring Icon">Leaf</i>
+                  <SiSpring className="text-2xl" />
                 </div>
               </div>
             </div>
@@ -171,39 +173,14 @@ export default function Card() {
               </div>
               <div className="mt-2">
                 <h3 className="font-bold">Talents</h3>
-                <ul className="grid grid-cols-3 gap-2 text-center text-xs">
-                  <li className="bg-accent/10 text-primary dark:bg-dark-background dark:text-primary-dark px-2 py-1 rounded">Turning chaos into usable tools</li>
-                  <li className="bg-accent/10 text-primary dark:bg-dark-background dark:text-primary-dark px-2 py-1 rounded" >Explaining complex things simply (usually with a metaphor or board game reference)</li>
-                  <li className="bg-accent/10 text-primary dark:bg-dark-background dark:text-primary-dark px-2 py-1 rounded" >Shipping things that make life easier for others (and usually for Future Me)</li>
-                  <li className="bg-accent/10 text-primary dark:bg-dark-background dark:text-primary-dark px-2 py-1 rounded">ADHD-fueled Systems Thinking</li>
+                <ul className="text-sm">
+                  <li className="bg-accent/10 text-primary dark:text-primary-dark px-2 py-1 rounded">Turning chaos into usable tools</li>
+                  <li className="bg-accent/10 text-primary dark:text-primary-dark px-2 py-1 rounded" >Explaining complex things simply (usually with a metaphor or board game reference)</li>
+                  <li className="bg-accent/10 text-primary dark:text-primary-dark px-2 py-1 rounded" >Shipping things that make life easier for others (and usually for Future Me)</li>
+                  <li className="bg-accent/10 text-primary dark:text-primary-dark px-2 py-1 rounded">ADHD-fueled Systems Thinking</li>
                 </ul>
               </div>
             </div>
-            {/* <div className="mt-4">
-              <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">
-                What I Use:
-              </h3>
-              <div className="grid grid-cols-3 gap-2 text-center text-xs">
-                <span className="bg-accent/10 text-primary dark:bg-dark-accent/10 dark:text-primary-dark px-2 py-1 rounded">
-                  Next.js
-                </span>
-                <span className="bg-accent/10 text-accent dark:bg-dark-accent/10 dark:text-dark-accent px-2 py-1 rounded">
-                  Figma
-                </span>
-                <span className="bg-accent/10 text-accent dark:bg-dark-accent/10 dark:text-dark-accent px-2 py-1 rounded">
-                  Tailwind
-                </span>
-                <span className="bg-accent/10 text-accent dark:bg-dark-accent/10 dark:text-dark-accent px-2 py-1 rounded">
-                  Node.js
-                </span>
-                <span className="bg-accent/10 text-accent dark:bg-dark-accent/10 dark:text-dark-accent px-2 py-1 rounded">
-                  TypeScript
-                </span>
-                <span className="bg-accent/10 text-accent dark:bg-dark-accent/10 dark:text-dark-accent px-2 py-1 rounded">
-                  Prisma
-                </span>
-              </div>
-            </div> */}
           </motion.div>
         )}
       </AnimatePresence>
