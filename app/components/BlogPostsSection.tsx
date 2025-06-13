@@ -4,9 +4,17 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-export default function BlogPostsSection({ blogPosts }: { blogPosts: any[] }) {
+interface BlogPost {
+  slug: string;
+  date: string;
+  readingTime: number;
+  title: string;
+  summary: string;
+}
+
+export default function BlogPostsSection({ blogPosts }: { blogPosts: BlogPost[] }) {
   return (
-    <section className="py-16 bg-secondary dark:bg-dark-secondary">
+    <section className="py-16 bg-subtle dark:bg-surface-dark">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0 }}
@@ -23,7 +31,7 @@ export default function BlogPostsSection({ blogPosts }: { blogPosts: any[] }) {
           </div>
           <Link
             href="/blog"
-            className="text-accent dark:text-dark-accent hover:underline flex items-center"
+            className="text-link dark:text-base-dark hover:underline flex items-center"
           >
             All posts <ArrowRight className="ml-1 h-4 w-4" />
           </Link>
@@ -38,7 +46,7 @@ export default function BlogPostsSection({ blogPosts }: { blogPosts: any[] }) {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true, margin: "-50px" }}
               whileHover={{ boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)" }}
-              className="bg-background dark:bg-dark-background p-6 rounded-lg shadow-md transition"
+              className="bg-background dark:bg-surface-dark p-6 rounded-lg shadow-md transition"
             >
               <span className="text-sm text-gray-500 dark:text-gray-400">
                 {post.date} · {post.readingTime} min read
@@ -49,7 +57,7 @@ export default function BlogPostsSection({ blogPosts }: { blogPosts: any[] }) {
               <p className="text-gray-600 dark:text-gray-400 mb-4">{post.summary}</p>
               <Link
                 href={`/blog/${post.slug}`}
-                className="text-accent dark:text-dark-accent hover:underline flex items-center text-sm font-medium"
+                className="text-link dark:text-base-dark hover:underline flex items-center text-sm font-medium"
               >
                 Read More <ArrowRight className="ml-1 h-4 w-4" />
               </Link>

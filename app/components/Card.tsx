@@ -3,8 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { FaJava } from "react-icons/fa";
-import { SiSpring, SiSpringboot } from "react-icons/si";
+import { SiSpring} from "react-icons/si";
 
 export default function Card() {
   const [flipped, setFlipped] = useState(false);
@@ -35,6 +34,7 @@ export default function Card() {
       role="button"
       aria-pressed={flipped}
       aria-label="About me card. Press Enter or Space to flip."
+      id="about-me-title"
     >
       <AnimatePresence mode="wait">
         {flipped ? (
@@ -44,41 +44,15 @@ export default function Card() {
             animate={{ rotateY: 0, opacity: 1 }}
             exit={{ rotateY: 180, opacity: 0 }}
             transition={{ duration: 0.6 }}
-            className="absolute w-full h-full rounded-3xl border-[6px] border-tertiary dark:border-dark-tertiary shadow-xl bg-gradient-to-br from-[#6366F1] to-[#4F46E5] dark:from-[#14B8A6] dark:to-[#06B6D4] p-6 backface-hidden z-10"
-            // rounded-2xl shadow-xl dark:shadow-[0_0_20px_4px_#14B8A6] hover:ring-4 hover:ring-accent dark:hover:ring-dark-hover-accent focus:outline-none focus:ring-4 focus:ring-hover-accent dark:focus:ring-dark-hover-accent"
-          >
-            {/* <h3
-              className="text-center text-lg font-bold mb-4 text-accent dark:text-accent-dark"
-              id="more-about-me"
+            className="absolute w-full h-full rounded-3xl border-[6px] border-warning dark:border-warning-dark shadow-xl bg-gradient-to-br from-[#6366F1] to-[#4F46E5] dark:from-[#14B8A6] dark:to-[#06B6D4] p-6 backface-hidden z-10"
             >
-              More About Me
-            </h3>
-            <div className="text-sm text-gray-800 dark:text-gray-200 mb-4">
-              <p>
-                I&apos;m passionate about designing intuitive UIs and building
-                performant web apps.
-              </p>
-              <p className="mt-2">
-                I enjoy mentoring developers, learning in public, and building
-                side projects.
-              </p>
-            </div>
-            <h4 className="text-sm font-semibold text-primary dark:text-dark-primary mb-1">
-              Hobbies:
-            </h4>
-            <ul className="list-disc ml-5 text-sm text-primary dark:text-dark-primary">
-              <li>Sketching characters</li>
-              <li>Baseball stats nerd</li>
-              <li>Collecting enamel pins</li>
-            </ul> */}
-
             <div className="text-sm space-y-4">
               <div>
-                <h3 className="text-lg font-bold mb-1">More About Me</h3>
+                <h2 className="text-lg font-bold mb-1">More About Me</h2>
                 <p>
                   Father of four, husband, and code wrangler who believes in
                   curiosity, compassion, and keeping pull requests under 400 lines.
-                  Still holding out hope that life has a dark mode. <Link href="/blog/about-me" className="text-tertiary dark:text-tertiary-dark hover:underline">Read more</Link>
+                  Still holding out hope that life has a dark mode. <Link href="/blog/about-me" className="text-text-warning dark:text-warning-dark hover:underline">Read more</Link>
                 </p>
               </div>
               <div>
@@ -100,21 +74,22 @@ export default function Card() {
             <div className="mt-6 flex justify-center gap-4">
               {/* <a
                 href="/projects"
-                className="text-secondary dark:text-dark-secondary hover:underline text-sm"
+                className="text-muted dark:text-muted-dark hover:underline text-sm"
                 aria-label="View my projects"
               >
                 Projects
               </a> */}
             <a
-                href="/resume"
-                className="text-secondary dark:text-dark-secondary hover:underline text-sm"
+                href="/justin-kishbaugh-resume.pdf"
+                download="justin-kishbaugh-resume.pdf"
+                className="text-text-muted dark:text-muted-dark hover:underline text-sm"
                 aria-label="View my resume"
               >
                 Resume
               </a>
               <a
                 href="/contact"
-                className="text-secondary dark:text-dark-secondary hover:underline text-sm"
+                className="text-text-muted dark:text-muted-dark hover:underline text-sm"
                 aria-label="Contact me"
               >
                 Contact
@@ -128,30 +103,30 @@ export default function Card() {
             animate={{ rotateY: 0, opacity: 1 }}
             exit={{ rotateY: -180, opacity: 0 }}
             transition={{ duration: 0.4 }}
-            className="absolute w-full h-full rounded-3xl border-[6px] border-tertiary dark:border-dark-tertiary shadow-xl bg-gradient-to-br from-[#6366F1] to-[#4F46E5] dark:from-[#14B8A6] dark:to-[#06B6D4] p-6 backface-hidden"
+            className="absolute w-full h-full rounded-3xl border-[6px] border-warning dark:border-warning-dark shadow-xl bg-gradient-to-br from-[#6366F1] to-[#4F46E5] dark:from-[#14B8A6] dark:to-[#06B6D4] p-6 backface-hidden"
             aria-labelledby="about-me-title"
           >
 
-            <div className="relative w-full h-36 rounded-xl overflow-hidden border-x-[8px] border-white/30 dark:border-white/20 shadow-lg bg-slate-500 dark:bg-slate-300">
-            <p className="absolute top-0 w-full bg-dark-secondary dark:bg-white/20 dark:text-dark-background text-dark-primary py-1 rounded-md shadow-md text-right text-xs">
+            <div className="relative w-full h-36 rounded-xl overflow-hidden border-x-[8px] border-white/30 dark:border-white/20 shadow-lg bg-bg-subtle dark:bg-slate-300">
+            <p className="absolute top-0 w-full bg-subtle dark:bg-white/20 dark:text-bg-surface-dark text-dark-primary py-1 rounded-md shadow-md text-right text-xs">
               Full Stack Developer
             </p>
-              <div className="w-24 h-24 mx-auto mt-5 rounded-full overflow-hidden border-4 border-tertiary dark:border-dark-tertiary bg-green-300">
+              <div className="w-24 h-24 mx-auto mt-7 rounded-full overflow-hidden border-4 border-warning dark:border-warning-dark bg-green-300">
                 <Image
                   src={nutshell}
                   alt="Cartoon of Man in a nutshell"
                   className="object-cover w-full h-full"
                 />
               </div>
-              <span className="absolute bottom-0 w-full bg-dark-secondary dark:bg-white/20 dark:text-dark-background text-dark-primary text-xs rounded-md shadow-md">
+              <span className="absolute bottom-0 w-full bg-subtle dark:bg-white/20 dark:text-bg-surface-dark text-dark-primary text-xs rounded-md shadow-md">
                 Since 2017
               </span>
               {/* Emblem */}
               <div className="absolute top-0 left-0 flex flex-col items-center ">
-                <div className="bg-dark-secondary text-primary dark:bg-white/10 dark:text-dark-background text-xs font-bold px-2 py-1 rounded-t-md shadow-md">
+                <div className="bg-surface text-text-link dark:bg-white/10 dark:text-bg-surface-dark text-xs font-bold px-2 py-1 rounded-t-md shadow-md">
                   Stage 3
                 </div>
-                <div className="bg-dark-secondary dark:bg-white/10 dark:text-dark-background p-2 rounded-full shadow-md">
+                <div className="bg-subtle-dark dark:bg-white/10 dark:text-bg-surface-dark p-2 rounded-full shadow-md">
                   <SiSpring className="text-2xl" />
                 </div>
               </div>
@@ -163,21 +138,21 @@ export default function Card() {
               <div className="mt-2">
                 <h3 className="font-bold">Specialties</h3>
                 <ul className="grid grid-cols-3 gap-2 text-center text-xs">
-                  <li className="bg-background text-primary dark:bg-dark-secondary dark:text-primary-dark px-2 py-1 rounded">Java</li>
-                  <li className="bg-background text-primary dark:bg-dark-secondary dark:text-primary-dark px-2 py-1 rounded">Kotlin</li>
-                  <li className="bg-background text-primary dark:bg-dark-secondary dark:text-primary-dark px-2 py-1 rounded">Spring Boot</li>
-                  <li className="bg-background text-primary dark:bg-dark-secondary dark:text-primary-dark px-2 py-1 rounded">React</li>
-                  <li className="bg-background text-primary dark:bg-dark-secondary dark:text-primary-dark px-2 py-1 rounded">Developer Experience</li>
-                  <li className="bg-background text-primary dark:bg-dark-secondary dark:text-primary-dark px-2 py-1 rounded">Mentorship</li>
+                  <li className="bg-bg-subtle text-text-primary dark:bg-subtle-dark dark:text-base-dark px-2 py-1 rounded">Java</li>
+                  <li className="bg-bg-subtle text-text-primary dark:bg-subtle-dark dark:text-base-dark px-2 py-1 rounded">Kotlin</li>
+                  <li className="bg-bg-subtle text-text-primary dark:bg-subtle-dark dark:text-base-dark px-2 py-1 rounded">Spring Boot</li>
+                  <li className="bg-bg-subtle text-text-primary dark:bg-subtle-dark dark:text-base-dark px-2 py-1 rounded">React</li>
+                  <li className="bg-bg-subtle text-text-primary dark:bg-subtle-dark dark:text-base-dark px-2 py-1 rounded">Developer Experience</li>
+                  <li className="bg-bg-subtle text-text-primary dark:bg-subtle-dark dark:text-base-dark px-2 py-1 rounded">Mentorship</li>
                 </ul>
               </div>
-              <div className="mt-2">
+              <div className="mt-2 mb-2">
                 <h3 className="font-bold">Talents</h3>
-                <ul className="text-sm">
-                  <li className="bg-accent/10 text-primary dark:text-primary-dark px-2 py-1 rounded">Turning chaos into usable tools</li>
-                  <li className="bg-accent/10 text-primary dark:text-primary-dark px-2 py-1 rounded" >Explaining complex things simply (usually with a metaphor or board game reference)</li>
-                  <li className="bg-accent/10 text-primary dark:text-primary-dark px-2 py-1 rounded" >Shipping things that make life easier for others (and usually for Future Me)</li>
-                  <li className="bg-accent/10 text-primary dark:text-primary-dark px-2 py-1 rounded">ADHD-fueled Systems Thinking</li>
+                <ul className="text-sm bg-bg-subtle">
+                  <li className="text-text-base dark:text-text-base-dark px-2 py-1 rounded">Turning chaos into usable tools</li>
+                  <li className="text-text-base dark:text-text-base-dark px-2 py-1 rounded" >Explaining complex things simply (usually with a metaphor or board game reference)</li>
+                  <li className="text-text-base dark:text-text-base-dark px-2 py-1 rounded" >Shipping things that make life easier for others (and usually for Future Me)</li>
+                  <li className="text-text-base dark:text-text-base-dark px-2 py-1 rounded">ADHD-fueled Systems Thinking</li>
                 </ul>
               </div>
             </div>

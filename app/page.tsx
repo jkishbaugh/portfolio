@@ -7,7 +7,7 @@ import ContactCTA from "./components/ContactCTA";
 export default function Home() {
   const blogPosts = getBlogPostSummaries();
   return (
-    <main className="min-h-screen bg-background dark:bg-dark-background">
+    <main className="min-h-screen bg-surface dark:bg-surface-dark">
       <HeroSection />
       <SkillsSection />
       <BlogPostsSection blogPosts={blogPosts} />

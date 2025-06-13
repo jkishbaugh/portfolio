@@ -7,20 +7,20 @@ import { ArrowRight} from "lucide-react";
 import Link from "next/link";
 
 export default function HeroSection() {
-    return ( <section className="pt-32 pb-20 px-6">
+    return ( <section className="pt-32 pb-20 px-6 bg-surface dark:bg-surface-dark">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-center justify-between">
           <div className="lg:w-1/2 mb-10 lg:mb-0">
-              <h1 className=" text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4">
-                Hi, I&apos;m
-                <span className="text-accent dark:text-dark-accent">
+              <h1 className=" text-4xl md:text-5xl lg:text-6xl font-bold text-base dark:text-white mb-4">
+                Hi, I&apos;m{" "}
+                <span className="text-primary dark:primary-dark">
                   Justin
                 </span>
               </h1>
-              <h2 className="text-2xl md:text-3xl text-gray-700 dark:text-gray-300 mb-6">
+              <h2 className="text-2xl md:text-3xl text-muted dark:text-primary mb-6">
                 Software Engineer
               </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-lg">
+              <p className="text-lg text-muted dark:text-base-dark mb-8 max-w-lg">
                 I&apos;m a curious human who accidentally turned problem solving
                 into a career. I believe in building things—and people—with
                 care, clarity, and just enough pragmatism to actually get things
@@ -35,15 +35,15 @@ export default function HeroSection() {
 
               <div className="flex flex-wrap gap-4">
                 <Link
-                  href="/projects"
-                  className="inline-flex items-center px-6 py-3 bg-accent dark:bg-dark-accent dark:hover:bg-dark-hover-accent text-white rounded-lg font-medium hover:bg-hover-accent transition hover:scale-105 active:scale-95"
+                  href="https://github.com/jkishbaugh"
+                  className="inline-flex items-center px-6 py-3 bg-primary dark:bg-primary-dark dark:hover:bg-primary-hover-dark text-white rounded-lg font-medium hover:bg-primary-hover transition hover:scale-105 active:scale-95"
                 >
                   View My Work <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
             
                   <Link
                     href="/contact"
-                    className="inline-flex items-center px-6 py-3 bg-secondary text-gray-800 dark:bg-dark-secondary dark:text-gray-200 rounded-lg font-medium hover:bg-secondary dark:hover:bg-dark-background transition hover:scale-105 active:scale-95"
+                    className="inline-flex items-center px-6 py-3 bg-primary/10 text-muted dark:bg-surface-dark dark:text-gray-200 rounded-lg font-medium hover:bg-subtle dark:hover:bg-surface-dark transition hover:scale-105 active:scale-95"
                   >
                     Get In Touch
                   </Link>
@@ -56,7 +56,7 @@ export default function HeroSection() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.3 }}
           >
-            <div className="relative mx-auto w-64 h-64 md:w-80 md:h-80 rounded-full p-[3px] bg-gradient-to-br from-accent to-hover-accent dark:from-dark-accent dark:to-dark-hover-accent">
+            <div className="relative mx-auto w-64 h-64 md:w-80 md:h-80 rounded-full p-[3px] bg-gradient-to-br from-accent to-primary-hover dark:from-primary-dark dark:to-dark-primary-hover">
               <div className="relative w-full h-full rounded-full overflow-hidden">
                 <Image
                   src={profilePic}

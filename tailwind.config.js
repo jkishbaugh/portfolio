@@ -9,27 +9,39 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "#F8FAFC",
-        secondary: "#E0E7FF",
+        "bg-surface": "#F8FAFC",
+        "bg-subtle": "#E0E7FF",
+        "bg-surface-dark": "#0F172A",
+        "bg-subtle-dark": "#1E293B",
+
         accent: "#6366F1",
         "hover-accent": "#4F46E5",
         tertiary: "#F59E0B",
 
-        "text-primary": "#1E293B",
-        "text-secondary": "#334155",
-        "text-accent": "#4338CA",
-        "text-tertiary": "#BE185D",
+        "text-primary": "#42516C",
+        // "text-tertiary": "#9D174D",
 
-        "dark-background": "#0F172A",
-        "dark-secondary": "#1E293B",
-        "dark-accent": "#14B8A6",
-        "dark-hover-accent": "#06B6D4",
-        "dark-tertiary": "#FBBF24",
+         // 🔤 Text Colors - Light Mode
+         "text-base": "#1E293B",
+         "text-muted": "#334155",
+         "text-link": "#4338CA",
+         "text-warning": "#BE185D",
+         
+        // 🔤 Text Colors - Dark Mode
+        "text-base-dark": "#F1F5F9",
+        "text-muted-dark": "#CBD5E1",
+        "text-link-dark": "#0D9488",
+        "text-warning-dark": "#F472B6",
 
-        "text-primary-dark": "#F1F5F9",
-        "text-secondary-dark": "#CBD5E1",
-        "text-accent-dark": "#0D9488",
-        "text-tertiary-dark": "#F472B6",
+         // 🔵 Primary Action (e.g., buttons, links)
+         primary: "#6366F1",
+         "primary-hover": "#4F46E5",
+         "primary-dark": "#14B8A6",
+         "primary-hover-dark": "#06B6D4",
+ 
+         // 🟡 Status / Accents / Warnings
+         warning: "#F59E0B",
+         "warning-dark": "#FBBF24",
       },
     },
   },

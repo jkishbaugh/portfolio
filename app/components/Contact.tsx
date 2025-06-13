@@ -38,20 +38,20 @@ const ContactForm = () => {
         setError('Something went wrong. Please try again later.');
       }
     } catch (err) {
-      setError('Error submitting the form.');
+      setError('Error submitting the form. ' + err);
     }
   };
 
   return (
     <div className="max-w-2xl mx-auto px-6 py-12">
-      <div className="bg-neutral-800 rounded-2xl shadow-xl p-8 text-gray-100">
-        <h2 className="text-3xl font-bold text-emerald-400 mb-6">Contact Me</h2>
+      <div className="bg-bg-subtle dark:bg-bg-subtle-dark rounded-2xl shadow-xl p-8">
+        <h2 className="text-3xl font-bold text-primary dark:text-primary-dark mb-6">Contact Me</h2>
         {submitted ? (
           <div className="text-center">
-            <h3 className="text-xl font-semibold text-indigo-400 mb-4">
+            <h3 className="text-xl font-semibold text-primary mb-4">
               Thanks for reaching out!
             </h3>
-            <p className="text-gray-300">
+            <p className="text-text-muted dark:text-text-muted-dark">
               I’ll get back to you as soon as possible.
             </p>
           </div>
@@ -68,7 +68,7 @@ const ContactForm = () => {
                 value={form.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 rounded-lg bg-neutral-700 text-gray-100 focus:outline-none focus:ring-2 focus:ring-emerald-400"
+                className="w-full px-4 py-2 rounded-lg bg-bg-subtle-dark dark:bg-bg-subtle text-text-base-dark dark:text-text-base focus:outline-none focus:ring-2 focus:ring-emerald-400"
               />
             </div>
             <div>
@@ -82,7 +82,7 @@ const ContactForm = () => {
                 value={form.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 rounded-lg bg-neutral-700 text-gray-100 focus:outline-none focus:ring-2 focus:ring-emerald-400"
+                className="w-full px-4 py-2 rounded-lg bg-bg-subtle-dark dark:bg-bg-subtle text-gray-100 focus:outline-none focus:ring-2 focus:ring-emerald-400"
               />
             </div>
             <div>
@@ -96,13 +96,13 @@ const ContactForm = () => {
                 value={form.message}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 rounded-lg bg-neutral-700 text-gray-100 focus:outline-none focus:ring-2 focus:ring-emerald-400"
+                className="w-full px-4 py-2 rounded-lg bg-bg-subtle-dark dark:bg-bg-subtle text-gray-100 focus:outline-none focus:ring-2 focus:ring-emerald-400"
               />
             </div>
             {error && <p className="text-red-400">{error}</p>}
             <button
               type="submit"
-              className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-medium py-2 px-4 rounded-lg transition duration-200"
+              className="w-full bg-primary dark:bg-primary-dark hover:bg-emerald-600 text-white font-medium py-2 px-4 rounded-lg transition duration-200"
             >
               Send Message
             </button>

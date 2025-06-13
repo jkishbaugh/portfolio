@@ -3,9 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: theme('colors.background');
-  --foreground: theme('colors.secondary');
-  --accent: theme('colors.accent');
+  --background: theme('colors.bg-surface');
+  --foreground: theme('colors.text-base');
 }
 
 body {

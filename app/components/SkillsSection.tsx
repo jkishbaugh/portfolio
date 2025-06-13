@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 export default function SkillsSection() {
-    return (<section className="py-16 bg-secondary dark:bg-dark-secondary">
+    return (<section className="py-16 bg-subtle dark:bg-surface-dark">
             <div className="container mx-auto px-6">
               <motion.div
                 initial={{ opacity: 0 }}
@@ -22,11 +22,11 @@ export default function SkillsSection() {
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true, margin: "-50px" }}
-                  className="bg-background dark:bg-dark-background rounded-lg p-6 shadow-md"
+                  className="bg-surface dark:bg-surface-dark rounded-lg p-6 shadow-md"
                 >
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6 flex items-center">
-                    <span className="w-8 h-8 bg-secondary dark:bg-dark-secondary rounded-full flex items-center justify-center mr-3">
-                      <span className="text-accent dark:text-dark-accent">T</span>
+                    <span className="w-8 h-8 bg-subtle dark:bg-surface-dark rounded-full flex items-center justify-center mr-3">
+                      <span className="text-text-link dark:text-base-dark">T</span>
                     </span>
                     Technical Skills
                   </h3>
@@ -42,10 +42,10 @@ export default function SkillsSection() {
                       { name: "Data", items: ["NoSQL", "SQL", "MongoDB", "Redis"] }
                     ].map((category) => (
                       <div key={category.name} className="mb-6">
-                        <h4 className="font-medium text-primary dark:text-primary-dark mb-2">{category.name}</h4>
+                        <h4 className="font-medium text-primary dark:text-base-dark mb-2">{category.name}</h4>
                         <ul className="space-y-1">
                           {category.items.map(item => (
-                            <li key={item} className="text-secondary dark:text-secondary-dark text-sm">
+                            <li key={item} className="text-muted dark:text-muted-dark text-sm">
                               {item}
                             </li>
                           ))}
@@ -61,11 +61,11 @@ export default function SkillsSection() {
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.1 }}
                   viewport={{ once: true, margin: "-50px" }}
-                  className="bg-background dark:bg-dark-background  rounded-lg p-6 shadow-md"
+                  className="bg-surface dark:bg-surface-dark  rounded-lg p-6 shadow-md"
                 >
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6 flex items-center">
-                    <span className="w-8 h-8 bg-secondary dark:bg-dark-secondary rounded-full flex items-center justify-center mr-3">
-                      <span className="text-accent dark:text-dark-accent">S</span>
+                    <span className="w-8 h-8 bg-subtle dark:bg-surface-dark rounded-full flex items-center justify-center mr-3">
+                      <span className="text-link dark:text-base-dark">S</span>
                     </span>
                     Professional Approach
                   </h3>
@@ -105,7 +105,7 @@ export default function SkillsSection() {
                     ].map((skill) => (
                       <div key={skill.title} className="flex">
                         <div className="flex-shrink-0 mr-4">
-                          <div className="w-1 bg-accent dark:bg-dark-accent h-full rounded"></div>
+                          <div className="w-1 bg-accent dark:bg-primary-dark h-full rounded"></div>
                         </div>
                         <div>
                           <h4 className="font-medium text-gray-800 dark:text-gray-200 mb-1">{skill.title}</h4>
