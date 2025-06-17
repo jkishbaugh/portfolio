@@ -31,7 +31,7 @@ export default function BlogPostsSection({ blogPosts }: { blogPosts: BlogPost[] 
           </div>
           <Link
             href="/blog"
-            className="text-link dark:text-base-dark hover:underline flex items-center"
+            className="text-text-link dark:text-text-base-dark hover:underline flex items-center"
           >
             All posts <ArrowRight className="ml-1 h-4 w-4" />
           </Link>
@@ -57,7 +57,7 @@ export default function BlogPostsSection({ blogPosts }: { blogPosts: BlogPost[] 
               <p className="text-gray-600 dark:text-gray-400 mb-4">{post.summary}</p>
               <Link
                 href={`/blog/${post.slug}`}
-                className="text-link dark:text-base-dark hover:underline flex items-center text-sm font-medium"
+                className="text-text-link dark:text-text-link-dark hover:underline flex items-center text-sm font-medium"
               >
                 Read More <ArrowRight className="ml-1 h-4 w-4" />
               </Link>

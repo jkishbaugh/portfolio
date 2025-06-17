@@ -17,10 +17,10 @@ export default function HeroSection() {
                   Justin
                 </span>
               </h1>
-              <h2 className="text-2xl md:text-3xl text-muted dark:text-primary mb-6">
+              <h2 className="text-2xl md:text-3xl text-muted dark:text-text-muted-dark mb-6">
                 Software Engineer
               </h2>
-              <p className="text-lg text-muted dark:text-base-dark mb-8 max-w-lg">
+              <p className="text-lg text-base dark:text-text-base-dark mb-8 max-w-lg">
                 I&apos;m a curious human who accidentally turned problem solving
                 into a career. I believe in building things—and people—with
                 care, clarity, and just enough pragmatism to actually get things
@@ -36,7 +36,7 @@ export default function HeroSection() {
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="https://github.com/jkishbaugh"
-                  className="inline-flex items-center px-6 py-3 bg-primary dark:bg-primary-dark dark:hover:bg-primary-hover-dark text-white rounded-lg font-medium hover:bg-primary-hover transition hover:scale-105 active:scale-95"
+                  className="inline-flex items-center px-6 py-3 bg-primary dark:bg-primary-dark dark:hover:bg-primary-hover-dark text-text-base dark:text-text-base-dark rounded-lg font-medium hover:bg-primary-hover dark:hover:bg-primary-hover-dark transition hover:scale-105 active:scale-95"
                 >
                   View My Work <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>

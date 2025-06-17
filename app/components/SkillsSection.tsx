@@ -42,10 +42,10 @@ export default function SkillsSection() {
                       { name: "Data", items: ["NoSQL", "SQL", "MongoDB", "Redis"] }
                     ].map((category) => (
                       <div key={category.name} className="mb-6">
-                        <h4 className="font-medium text-primary dark:text-base-dark mb-2">{category.name}</h4>
+                        <h4 className="font-medium text-text-base dark:text-text-base-dark mb-2">{category.name}</h4>
                         <ul className="space-y-1">
                           {category.items.map(item => (
-                            <li key={item} className="text-muted dark:text-muted-dark text-sm">
+                            <li key={item} className="text-text-muted dark:text-text-muted-dark text-sm">
                               {item}
                             </li>
                           ))}
@@ -65,7 +65,7 @@ export default function SkillsSection() {
                 >
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6 flex items-center">
                     <span className="w-8 h-8 bg-subtle dark:bg-surface-dark rounded-full flex items-center justify-center mr-3">
-                      <span className="text-link dark:text-base-dark">S</span>
+                      <span className="text-link dark:text-text-base-dark">S</span>
                     </span>
                     Professional Approach
                   </h3>
@@ -108,7 +108,7 @@ export default function SkillsSection() {
                           <div className="w-1 bg-accent dark:bg-primary-dark h-full rounded"></div>
                         </div>
                         <div>
-                          <h4 className="font-medium text-gray-800 dark:text-gray-200 mb-1">{skill.title}</h4>
+                          <h4 className="font-medium text-text-base dark:text-text-base-dark mb-1">{skill.title}</h4>
                           <p className="text-gray-600 dark:text-gray-400 text-sm">{skill.description}</p>
                         </div>
                       </div>
