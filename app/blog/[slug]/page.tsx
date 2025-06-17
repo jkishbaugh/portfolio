@@ -4,8 +4,11 @@ import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
 
+
+const postsDirectory = path.join(process.cwd(), "posts"); 
+
 export async function generateStaticParams() {
-  const files = fs.readdirSync("posts");
+  const files = fs.readdirSync(postsDirectory);
   return files.map((file) => ({
     slug: file.replace(/\.md$/, ""),
   }));
@@ -20,7 +23,7 @@ export default async function BlogPost({ params, searchParams }: PageProps) {
   const { slug } = await params;
   await searchParams; // Ensure searchParams is awaited even if not used
 
-  const filePath = path.join("posts", `${slug}.md`);
+  const filePath = path.join(postsDirectory, `${slug}.md`);
   const fileContent = fs.readFileSync(filePath, "utf8");
   const { data, content } = matter(fileContent);
 
