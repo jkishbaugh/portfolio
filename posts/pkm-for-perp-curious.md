@@ -3,7 +3,6 @@ title: "Personal Knowledge Management for the Perpetually Curious"
 date: "2025-05-14"
 summary: "What I wish I would have known when I began my journey to manage my information acquisition."
 ---
-## Personal Knowledge Management for the Perpetually Curious
 
 ### The Problem with Learning Everything (And Remembering Little)
 

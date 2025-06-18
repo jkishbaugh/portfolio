@@ -25,7 +25,7 @@ export default function Card() {
   return (
     <div
       className="relative
-    w-1/5 h-[36rem]
+    w-1/5 h-1/5
     transition-all duration-300 ease-in-out
     mx-auto
     flex flex-col items-center justify-center hover:scale-105"

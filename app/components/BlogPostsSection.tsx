@@ -54,7 +54,7 @@ export default function BlogPostsSection({ blogPosts }: { blogPosts: BlogPost[] 
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-2 mb-3">
                 {post.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">{post.summary}</p>
+              <p className="text-text-base dark:text-text-base-dark mb-4">{post.summary}</p>
               <Link
                 href={`/blog/${post.slug}`}
                 className="text-text-link dark:text-text-link-dark hover:underline flex items-center text-sm font-medium"
