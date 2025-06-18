@@ -25,7 +25,7 @@ export default function Card() {
   return (
     <div
       className="relative
-    w-1/5 h-1/5
+    w-[350px] h-[42rem]
     transition-all duration-300 ease-in-out
     mx-auto
     flex flex-col items-center justify-center hover:scale-105"
@@ -148,11 +148,23 @@ export default function Card() {
               </div>
               <div className="mt-2 mb-2">
                 <h3 className="font-bold">Talents</h3>
-                <ul className="text-sm bg-bg-subtle">
-                  <li className="text-text-base dark:text-text-base-dark px-2 py-1 rounded">Turning chaos into usable tools</li>
-                  <li className="text-text-base dark:text-text-base-dark px-2 py-1 rounded" >Explaining complex things simply (usually with a metaphor or board game reference)</li>
-                  <li className="text-text-base dark:text-text-base-dark px-2 py-1 rounded" >Shipping things that make life easier for others (and usually for Future Me)</li>
-                  <li className="text-text-base dark:text-text-base-dark px-2 py-1 rounded">ADHD-fueled Systems Thinking</li>
+                <ul className="text-m">
+                  <li className="text-text-base px-2 py-1 list-disc list-inside flex items-start">
+                    <span className="mr-2">•</span>
+                    <span>Turning chaos into usable tools</span>
+                  </li>
+                  <li className="text-text-base px-2 py-1 list-disc list-inside flex items-start">
+                    <span className="mr-2">•</span>
+                    <span>Explaining complex things simply (usually with a metaphor or board game reference)</span>
+                  </li>
+                  <li className="text-text-base px-2 py-1 list-disc list-inside flex items-start">
+                    <span className="mr-2">•</span>
+                    <span>Shipping things that make life easier for others (and usually for Future Me)</span>
+                  </li>
+                  <li className="text-text-base px-2 py-1 list-disc list-inside flex items-start">
+                    <span className="mr-2">•</span>
+                    <span>ADHD-fueled Systems Thinking</span>
+                  </li>
                 </ul>
               </div>
             </div>
